@@ -68,6 +68,7 @@ else if (computerSelection == "scissors"){
 
 }
 
+/*
 function game(){
    let playerwins = 0;
    let computerwins = 0;
@@ -86,7 +87,7 @@ else if(playerwins<computerwins){return "Computer wins!";}
 else {return "Draw";}
 
 }
-
+*/
 
 
 
