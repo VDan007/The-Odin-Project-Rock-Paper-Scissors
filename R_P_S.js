@@ -16,7 +16,7 @@ console.log(computerSelection);
 
 
 let playerSelection = x;
-
+console.log("Plyer selected:"+ playerSelection);
 
 
 
@@ -71,9 +71,15 @@ rock.addEventListener("click",function(){
 });
 
 
+const paper = document.querySelector("#Paper");
+paper.addEventListener("click",function(){
+   round("paper");
+});
 
-
-
+const scissors = document.querySelector("#Scissors");
+scissors.addEventListener("click",function(){
+   round("scissors");
+});
 
 
 
