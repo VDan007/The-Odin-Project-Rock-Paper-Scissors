@@ -21,7 +21,7 @@ console.log("Plyer selected:"+ playerSelection);
 
 
 if(computerSelection == playerSelection){
-   console.log("Draw");
+   result.append(draw);
    return "Draw";
 }
 else if (computerSelection == "rock"){
@@ -83,6 +83,10 @@ scissors.addEventListener("click",function(){
 
 
 
+const result = document.querySelector("#result");
+
+const draw = document.createElement("h1");
+draw.textContent = "Draw";
 
 
 
