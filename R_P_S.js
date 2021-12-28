@@ -1,4 +1,4 @@
-function round(){ 
+function round(x){ 
 
 
 function computerPlay(){
@@ -13,14 +13,10 @@ console.log(computerSelection);
 
 
 
-function userPlay(){
-   let input = window.prompt("Your Play?");
-   return input.toLowerCase();
-  
-}
 
-let playerSelection = userPlay();
-console.log(playerSelection);
+
+let playerSelection = x;
+
 
 
 
@@ -68,26 +64,11 @@ else if (computerSelection == "scissors"){
 
 }
 
-/*
-function game(){
-   let playerwins = 0;
-   let computerwins = 0;
 
-for(let i = 0; i<5;i++){
-   let outcome = round();
-if(outcome == "Computer wins"){computerwins=computerwins+1;}
-else if (outcome == "Player wins"){playerwins=playerwins+1;}
-}
-
-console.log("Matches won by player:"+playerwins);
-console.log("Matches won by computer:"+computerwins);
-
-if (playerwins>computerwins){return "Player wins!!";}
-else if(playerwins<computerwins){return "Computer wins!";}
-else {return "Draw";}
-
-}
-*/
+const rock = document.querySelector("#Rock");
+rock.addEventListener("click",function(){
+   round("rock");
+});
 
 
 
