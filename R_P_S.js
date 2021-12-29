@@ -9,6 +9,7 @@ function computerPlay(){
 }
 
 let computerSelection = computerPlay();
+compSelection.textContent =computerSelection;
 console.log(computerSelection);
 
 
@@ -21,7 +22,7 @@ console.log("Plyer selected:"+ playerSelection);
 
 
 if(computerSelection == playerSelection){
-   result.append(draw);
+   computerSelectionBoard.append(compSelection);
    return "Draw";
 }
 else if (computerSelection == "rock"){
@@ -83,10 +84,14 @@ scissors.addEventListener("click",function(){
 
 
 
-const result = document.querySelector("#result");
 
-const draw = document.createElement("h1");
+
+const draw = document.createElement("h3");
 draw.textContent = "Draw";
 
 
 
+const computerSelectionBoard = document.querySelector(".computerSelectionBoard");
+
+const compSelection = document.createElement("h3");
+compSelection.textContent =computerSelection;
