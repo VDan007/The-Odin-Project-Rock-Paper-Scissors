@@ -9,6 +9,7 @@ function computerPlay(){
 }
 
 let computerSelection = computerPlay();
+computerSelectionBoard.append(compSelection);
 compSelection.textContent =computerSelection;
 console.log(computerSelection);
 
@@ -22,7 +23,7 @@ console.log("Plyer selected:"+ playerSelection);
 
 
 if(computerSelection == playerSelection){
-   computerSelectionBoard.append(compSelection);
+   
    return "Draw";
 }
 else if (computerSelection == "rock"){
@@ -94,4 +95,3 @@ draw.textContent = "Draw";
 const computerSelectionBoard = document.querySelector(".computerSelectionBoard");
 
 const compSelection = document.createElement("h3");
-compSelection.textContent =computerSelection;
