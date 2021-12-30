@@ -97,6 +97,9 @@ const rock = document.querySelector("#Rock");
 rock.addEventListener("click",function(){
    round("rock");
    fun();
+   able();
+   disable();
+   
 });
 
 
@@ -104,13 +107,25 @@ const paper = document.querySelector("#Paper");
 paper.addEventListener("click",function(){
    round("paper");
    fun();
+   able();
+   disable();
+   
 });
 
 const scissors = document.querySelector("#Scissors");
 scissors.addEventListener("click",function(){
    round("scissors");
    fun();
+   able();
+   disable();
+   
 });
+
+const r = document.querySelector("#Restart");
+r.addEventListener("click",function(){
+   restart();
+});
+
 
 
 
@@ -148,3 +163,26 @@ function fun () {
    else {endh1.textContent = "Who will win?";}
 }
 
+function disable (){
+   if(playerS == 5 || computerS == 5) {
+      document.getElementById("Rock").disabled = true;
+      document.getElementById("Paper").disabled = true;
+      document.getElementById("Scissors").disabled = true;
+      document.getElementById("Restart").disabled = false;
+      
+
+   }
+}
+
+function able (){
+   if(playerS !== 5 || computerS !== 5) {
+      document.getElementById("Rock").disabled = false;
+      document.getElementById("Paper").disabled = false;
+      document.getElementById("Scissors").disabled = false;
+      document.getElementById("Restart").disabled = true;
+   }
+}
+
+function restart () {
+   window.location.reload();
+}
