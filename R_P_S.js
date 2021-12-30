@@ -1,7 +1,9 @@
    var playerS = 0;
    var computerS =0;
+
    
-    
+   
+   
 
 function round(x){ 
    
@@ -94,17 +96,20 @@ else if (computerSelection == "scissors"){
 const rock = document.querySelector("#Rock");
 rock.addEventListener("click",function(){
    round("rock");
+   fun();
 });
 
 
 const paper = document.querySelector("#Paper");
 paper.addEventListener("click",function(){
    round("paper");
+   fun();
 });
 
 const scissors = document.querySelector("#Scissors");
 scissors.addEventListener("click",function(){
    round("scissors");
+   fun();
 });
 
 
@@ -127,13 +132,19 @@ pS.textContent ="Player Score:" + " " + `${playerS}` ;
 const cS =document.querySelector("#computerScore");
 cS.textContent ="Computer Score"+" "+`${computerS}` ;
 
+
 const end = document.querySelector("#end");
 const endh1 = document.createElement("h1");
 end.append(endh1);
 
-if(playerS == 0){
-   endh1.textContent ="Hurray";
+
+function fun () {
+   if(playerS == 5 ){
+      endh1.textContent ="Human Rules!!!";
+   }
+   else if(computerS == 5){
+      endh1.textContent = "TinCan Wins!!!";
+   }
+   else {endh1.textContent = "Who will win?";}
 }
-else if (playerS == 1){
-   endh1.textContent ="Burray";
-}
+
